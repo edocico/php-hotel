@@ -8,3 +8,12 @@ ul,
 li {
   list-style: none;
 }
+
+.title {
+  margin-bottom: 40px;
+}
+
+.hotel-name {
+  display: flex;
+  gap: 50px;
+}

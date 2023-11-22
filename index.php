@@ -52,14 +52,25 @@
 </head>
 <body>
 
-    <h1>Lista degli Hotel</h1>
+    <h1 class="title">Lista degli Hotel</h1>
 
-    <ul>
+    <ul class="hotel-name">
         <?php
         foreach ($hotels as $hotel) {
             //var_dump($hotel)
         ?>
-        <li><strong><?php echo $hotel['name']?></strong></li>
+        <li><strong><?php echo $hotel['name']?></strong>
+        <ul>
+            <?php
+            foreach ($hotel as $key => $value) {
+            ?>
+            <li><span><?php echo $key?> :</span>
+            <span><?php echo $value?></span></li>
+            <?php    
+            }
+            ?>
+        </ul>
+        </li>
         <?php
         }
         ?>
