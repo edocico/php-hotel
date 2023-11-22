@@ -23,6 +23,7 @@ th {
   border: 1px solid black;
   color: white;
   background-color: black;
+  text-transform: uppercase;
 }
 
 td {
