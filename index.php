@@ -68,8 +68,8 @@
             <tbody>
                 <?php foreach ($hotels as $hotel) { ?>
                     <tr>
-                        <td><?php echo $hotel['name']?></td>
-                        <td><?php echo $hotel['description']?></td>
+                        <td class="text-left"><?php echo $hotel['name']?></td>
+                        <td class="text-left"><?php echo $hotel['description']?></td>
                         <td class="text-center"><?php echo $hotel['parking'];
                         if ($hotel['parking'] === true) {
                             echo "SI";
