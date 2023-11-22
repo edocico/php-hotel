@@ -52,30 +52,38 @@
 </head>
 <body>
 
-    <h1 class="title">Lista degli Hotel</h1>
+    <div class="title"><h1>Lista degli Hotel</h1></div>
 
-    <ul class="hotel-name">
-        <?php
-        foreach ($hotels as $hotel) {
-            //var_dump($hotel)
-        ?>
-        <li><strong><?php echo $hotel['name']?></strong>
-        <ul>
-            <?php
-            foreach ($hotel as $key => $value) {
-            ?>
-            <li><span><?php echo $key?> :</span>
-            <span><?php echo $value?></span></li>
-            <?php    
-            }
-            ?>
-        </ul>
-        </li>
-        <?php
-        }
-        ?>
-
-    </ul>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrizione</th>
+                    <th>Parcheggio</th>
+                    <th>Voto</th>
+                    <th>Distanza dal centro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($hotels as $hotel) { ?>
+                    <tr>
+                        <td><?php echo $hotel['name']?></td>
+                        <td><?php echo $hotel['description']?></td>
+                        <td class="text-center"><?php echo $hotel['parking'];
+                        if ($hotel['parking'] === true) {
+                            echo "SI";
+                        } else {
+                            echo "NO";
+                        } ?>
+                        </td>
+                        <td class="text-center"><?php echo $hotel['vote']?></td>
+                        <td class="text-center"><?php echo $hotel['distance_to_center']?> Km</td>
+                    </tr>
+                <?php } ?>
+            </tbody> 
+        </table>
+    </div>
 
 </body>
 </html>
