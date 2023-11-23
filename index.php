@@ -52,7 +52,10 @@
 </head>
 <body>
 
-    <div class="title"><h1>Lista degli Hotel</h1></div>
+    <div class="title">
+        <h1>Lista degli Hotel</h1>
+        
+    </div>
 
     <div class="container">
         <table>
@@ -70,7 +73,7 @@
                     <tr>
                         <td class="text-left"><?php echo $hotel['name']?></td>
                         <td class="text-left"><?php echo $hotel['description']?></td>
-                        <td class="text-center"><?php echo $hotel['parking'];
+                        <td class="text-center"><?php 
                         if ($hotel['parking'] === true) {
                             echo "SI";
                         } else {
